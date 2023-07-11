@@ -18,7 +18,7 @@ jobs:
 
       - name: Check branch name
         run: |
-          echo "The Github context is ${{ github.ref }}."
+          echo "The Github context is ${{ github }}."
 
       - name: Run a one-line script
         run: echo Hello, world!
