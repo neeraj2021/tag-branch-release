@@ -17,12 +17,8 @@ jobs:
           persist-credentials: false
 
       - name: Check branch name
-        run: echo "The Github context is ${{ github }}."
         run: |
-          if [[ ${{ github.ref }} != 'refs/heads/release' ]]; then
-            echo "Branch is not the release branch. Skipping the release."
-            exit 0
-          fi
+          echo "The Github context is ${{ github.ref }}."
 
       - name: Run a one-line script
         run: echo Hello, world!
